@@ -1,5 +1,6 @@
 package com.example.anggarisky.fitprogram;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -53,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
         btnexercise.startAnimation(btthree);
         bgprogress.startAnimation(bttwo);
         bgprogresstop.startAnimation(ltr);
+
+        // give an event to another page
+        btnexercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(MainActivity.this,WorkoutAct.class);
+                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(a);
+            }
+        });
 
 
 
