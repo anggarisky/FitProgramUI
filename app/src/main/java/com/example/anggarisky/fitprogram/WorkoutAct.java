@@ -1,5 +1,6 @@
 package com.example.anggarisky.fitprogram;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,6 +49,17 @@ public class WorkoutAct extends AppCompatActivity {
         btnexercise = (TextView) findViewById(R.id.btnexercise);
         divpage = (View) findViewById(R.id.divpage);
         bgprogress = (View) findViewById(R.id.bgprogress);
+
+
+        // give an event to another page
+        btnexercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(WorkoutAct.this,StartWorkAct.class);
+                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(a);
+            }
+        });
 
         // item fit layout
         fitone = (LinearLayout) findViewById(R.id.fitone);
