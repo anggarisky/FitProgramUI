@@ -1,5 +1,6 @@
 package com.example.anggarisky.fitprogram;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -81,6 +82,16 @@ public class StartWorkAct extends AppCompatActivity {
         imgtimer.startAnimation(alphagogo);
 
         startTimer();
+
+        // give an event to another page
+        btnexercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(StartWorkAct.this,EditWorkAct.class);
+                a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(a);
+            }
+        });
 
     }
 

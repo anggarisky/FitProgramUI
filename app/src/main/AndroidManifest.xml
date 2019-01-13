@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".WorkoutAct" />
-        <activity android:name=".StartWorkAct"></activity>
+        <activity android:name=".StartWorkAct" />
+        <activity android:name=".EditWorkAct"></activity>
     </application>
 
 </manifest>
